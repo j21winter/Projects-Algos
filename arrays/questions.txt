@@ -1,0 +1,47 @@
+What is an array?
+    An array is a mutable and ordered collection of data. 
+
+What types of values can be held in arrays?
+    All types of values can be held in arrays.
+
+What happens if you try to contain values of different data types in an array?
+    It will be successfully held. There are no restrictions
+
+What is the index of the first element in an array?
+    0
+
+What is the index of the last element in an array?
+    arr.length - 1
+
+If you control an array, what is the easiest way to determine the number of values?
+    .length
+
+When would the above method not work well, and what must you do in that case?
+    if there are undefined values in the array. In which case you would want to loop the array and remove any qualifiying data.
+
+What are two ways to make an array one element longer?
+    for loop to bump items up
+    .push(item)
+    arr.length = arr.length+1
+    .upshift()
+
+What are two ways to make an array two elements shorter?
+    arr.length = arr.length - 2
+    .pop().pop()
+    .shift().shift()
+
+What is the upper limit on the number of values an array can hold? 
+    2^53 - 1 (equal to 9007199254740991).
+
+When working with arrays, does working “in-place” really matter? If so, when and why?
+    It can be beneficial for memory to work in place and alter the original array. 
+    The alternative would be to create a second array, copy the array or something similar.
+    It would become especially important when working with large arrays
+
+Which values are “falsy” in JavaScript, and what does “falsy” mean anyway?
+    Falsy would be values that equate to false in a conditional
+    These would be nothing, undefined, false, 0, null, '', NaN
+
+What does “passing by reference” mean?
+    when a function is given an array as a parameter it is not working directly with the array itself, but instead a reference of the memory location of that data.
+    Essentially a copy of the array and not the original array.
