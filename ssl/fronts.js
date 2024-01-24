@@ -41,15 +41,25 @@ class SSL {
         }
         return this.head.data
     }
+
+    contains(val){ 
+        if(!this.head){
+            return false;
+        }
+
+        let runner = this.head
+
+        while (runner != null){
+            if(runner.data == val){
+                return true
+            } else {
+                runner = runner.next
+            }
+        }
+
+        return false
+    }
 }
 
 const ssl_1 = new SSL()
-
-ssl_1
-console.log(ssl_1)
-
-ssl_1.removeFront()
-console.log(ssl_1)
-
-console.log(ssl_1.front())
 
