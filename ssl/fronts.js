@@ -91,9 +91,64 @@ class SSL {
 
         return values.join(',')
     }
+
+    max(){
+        if(!this.head){
+            return null
+        }
+
+        let runner = this.head
+        let max = this.head.data
+
+        while(runner){
+            if(runner.data > max){
+                max = runner.data
+            }
+            runner = runner.next
+        }
+        return max
+    }
+
+    min(){
+        if(!this.head){
+            return null
+        }
+
+        let runner = this.head
+        let min = this.head.data
+
+        while(runner){
+            if(runner.data < min){
+                min = runner.data
+            }
+            runner = runner.next
+        }
+        return min
+    }
+
+    average(){
+        if(!this.head){
+            return null
+        }
+
+        let sum = 0
+        let itemCount = 0
+        let runner = this.head
+
+        while(runner){
+            sum += runner.data
+            itemCount ++
+            runner = runner.next
+        }
+
+        return sum / itemCount
+    }
 }
 
 const ssl_1 = new SSL()
 
-
+ssl_1.addFront(12).addFront(1).addFront(4)
+console.log(ssl_1.max())
+console.log(ssl_1.min())
+console.log(ssl_1.average())
 
