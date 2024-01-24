@@ -75,8 +75,25 @@ class SSL {
 
         return count
     }
+
+    display(){
+        if(!this.head){
+            return null
+        }
+        
+        const values = []
+        let runner = this.head
+
+        while(runner){
+            values.unshift(runner.data)
+            runner = runner.next
+        }
+
+        return values.join(',')
+    }
 }
 
 const ssl_1 = new SSL()
+
 
 
