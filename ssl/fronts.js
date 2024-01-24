@@ -59,7 +59,24 @@ class SSL {
 
         return false
     }
+
+    length(){
+        if(!this.head){
+            return 0;
+        }
+
+        let runner = this.head
+        let count = 1
+
+        while (runner.next){
+            runner = runner.next
+            count ++
+        }
+
+        return count
+    }
 }
 
 const ssl_1 = new SSL()
+
 
